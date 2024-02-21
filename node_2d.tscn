@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://qffy40t35fcg"]
+
+[ext_resource type="PackedScene" uid="uid://mg3xxx4uuh2p" path="res://character.tscn" id="1_hj2ya"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_alkye"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cal0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0w48d"]
+size = Vector2(0.993685, 0.958812)
+
+[node name="Level1" type="Node2D"]
+position = Vector2(502, 205)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hj2ya")]
+position = Vector2(13, 9)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(231, 69)
+scale = Vector2(-629.018, 57.5)
+mesh = SubResource("QuadMesh_alkye")
+texture = SubResource("CanvasTexture_cal0o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MeshInstance2D"]
+position = Vector2(40, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D/StaticBody2D"]
+position = Vector2(-40.0008, -51.0098)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_0w48d")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
