@@ -13,11 +13,11 @@ size = Vector2(0.993685, 0.958812)
 position = Vector2(502, 205)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_hj2ya")]
-position = Vector2(13, 9)
+position = Vector2(-28, 18)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(231, 69)
-scale = Vector2(-629.018, 57.5)
+position = Vector2(214, 53.6426)
+scale = Vector2(-629.018, 14.7852)
 mesh = SubResource("QuadMesh_alkye")
 texture = SubResource("CanvasTexture_cal0o")
 
@@ -25,7 +25,7 @@ texture = SubResource("CanvasTexture_cal0o")
 position = Vector2(40, 51)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D/StaticBody2D"]
-position = Vector2(-40.0008, -51.0098)
-scale = Vector2(1, 1)
+visible = false
+position = Vector2(-39.9984, -51.0174)
 shape = SubResource("RectangleShape2D_0w48d")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
