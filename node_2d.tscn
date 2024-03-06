@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://qffy40t35fcg"]
+[gd_scene load_steps=6 format=3 uid="uid://qffy40t35fcg"]
 
 [ext_resource type="PackedScene" uid="uid://mg3xxx4uuh2p" path="res://character.tscn" id="1_hj2ya"]
+[ext_resource type="Script" path="res://new folder/StateMachine.gd" id="2_msmiy"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_alkye"]
 
@@ -29,3 +30,12 @@ visible = false
 position = Vector2(-39.9984, -51.0174)
 shape = SubResource("RectangleShape2D_0w48d")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_msmiy")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+
+[node name="Move" type="Node" parent="StateMachine"]
+
+[node name="Jump" type="Node" parent="StateMachine"]
